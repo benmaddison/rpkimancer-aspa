@@ -3,6 +3,10 @@
 An [rpkimancer](https://github.com/benmaddison/rpkimancer/) plug-in providing
 the ability to read and write example ASPA objects.
 
+[![CI/CD](https://github.com/benmaddison/rpkimancer-aspa/actions/workflows/cicd.yml/badge.svg)](https://github.com/benmaddison/rpkimancer-aspa/actions/workflows/cicd.yml)
+[![codecov](https://codecov.io/gh/benmaddison/rpkimancer-aspa/branch/master/graph/badge.svg?token=MkfmVgDCsS)](https://codecov.io/gh/benmaddison/rpkimancer-aspa)
+[![Updates](https://pyup.io/repos/github/benmaddison/rpkimancer-aspa/shield.svg)](https://pyup.io/repos/github/benmaddison/rpkimancer-aspa/)
+
 ## Installation
 
 ``` sh
