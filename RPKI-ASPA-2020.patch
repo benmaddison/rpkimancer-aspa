@@ -1,0 +1,10 @@
+3c3
+<      pkcs-9(9) smime(16) modules(0) id-mod-rpki-aspa-2020(TBD2) }
+---
+>      pkcs-9(9) smime(16) modules(0) id-mod-rpki-aspa-2020(73) } -- next available
+24c24
+< id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct TBD }
+---
+> id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct 49 } -- next available
+42d41
+< 

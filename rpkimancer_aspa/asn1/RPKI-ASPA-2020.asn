@@ -1,0 +1,41 @@
+RPKI-ASPA-2020
+  { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
+     pkcs-9(9) smime(16) modules(0) id-mod-rpki-aspa-2020(73) } -- next available
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+CONTENT-TYPE
+FROM CryptographicMessageSyntax-2010  -- RFC 6268
+    { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
+       pkcs-9(9) smime(16) modules(0) id-mod-cms-2009(58) } ;
+
+ContentSet CONTENT-TYPE ::= { ct-ASPA, ... }
+
+--
+-- ASPA Content Type
+--
+
+id-smime OBJECT IDENTIFIER ::= { iso(1) member-body(2)
+     us(840) rsadsi(113549) pkcs(1) pkcs-9(9) 16 }
+
+id-ct OBJECT IDENTIFIER ::= { id-smime 1 }
+
+id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct 49 } -- next available
+
+ct-ASPA CONTENT-TYPE ::=
+    { TYPE ASProviderAttestation IDENTIFIED BY id-ct-ASPA }
+
+ASProviderAttestation ::= SEQUENCE {
+  version [0] ASPAVersion DEFAULT v0,
+  aFI  AddressFamilyIdentifier,
+  customerASID  ASID,
+  providerASSET  SEQUENCE (SIZE(1..MAX)) OF ASID OPTIONAL }
+
+ASPAVersion ::= INTEGER  { v0(0) }
+
+AddressFamilyIdentifier ::= OCTET STRING (SIZE (2))
+
+ASID ::= INTEGER
+
+END
