@@ -28,6 +28,17 @@ if typing.TYPE_CHECKING:
 log = logging.getLogger(__name__)
 
 META_AFI = "<afi>"
+META_PROVIDER_AS = "<asn[:(4|6)]>"
+
+
+def provider_as(spec: str) -> typing.Tuple[int, typing.Optional[int]]:
+    """Argument type checker for `ASID:AFI` pair."""
+    try:
+        as_id, afi = map(int, spec.split(":", 1))
+    except ValueError:
+        as_id = int(spec)
+        afi = None
+    return as_id, afi
 
 
 class ConjureAspa(ConjurePlugin):
@@ -35,12 +46,6 @@ class ConjureAspa(ConjurePlugin):
 
     def init_parser(self) -> None:
         """Set up command line argument parser."""
-        self.parser.add_argument("--aspa-afi",
-                                 default=4,
-                                 choices=(4, 6),
-                                 metavar=META_AFI,
-                                 help="AFI of ASPA object "
-                                      "(default: %(default)s)")
         self.parser.add_argument("--aspa-customer-as",
                                  type=int,
                                  default=DEFAULT_CA_AS_RESOURCES[0],
@@ -48,9 +53,9 @@ class ConjureAspa(ConjurePlugin):
                                  help="ASPA customer AS "
                                       "(default: %(default)s)")
         self.parser.add_argument("--aspa-provider-asns",
-                                 nargs="+", type=int,
-                                 default=[65001, 65002],
-                                 metavar=META_AS,
+                                 nargs="+", type=provider_as,
+                                 default=[(65001, None), (65002, 4)],
+                                 metavar=META_PROVIDER_AS,
                                  help="ASPA provider ASNs "
                                       "(default: %(default)s)")
 
@@ -64,7 +69,6 @@ class ConjureAspa(ConjurePlugin):
         from .sigobj import Aspa
         log.info("creating ASPA object")
         Aspa(issuer=ca,
-             afi=parsed_args.aspa_afi,
              customer_as=parsed_args.aspa_customer_as,
              provider_as_set=parsed_args.aspa_provider_asns)
         return None

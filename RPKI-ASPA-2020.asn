@@ -27,16 +27,22 @@ ct-ASPA CONTENT-TYPE ::=
     { TYPE ASProviderAttestation IDENTIFIED BY id-ct-ASPA }
 
 ASProviderAttestation ::= SEQUENCE {
-  version [0] ASPAVersion DEFAULT v0,
-  aFI  AddressFamilyIdentifier,
+  version [0]   ASPAVersion DEFAULT v0,
   customerASID  ASID,
-  providerASSET  SEQUENCE (SIZE(1..MAX)) OF ASID OPTIONAL }
+  providers     ProviderASSet
+}
 
 ASPAVersion ::= INTEGER  { v0(0) }
 
-AddressFamilyIdentifier ::= OCTET STRING (SIZE (2))
+ProviderASSet ::= SEQUENCE (SIZE(1..MAX)) OF ProviderAS
+
+ProviderAS ::= SEQUENCE {
+  providerASID  ASID,
+  afiLimit      AddressFamilyIdentifier OPTIONAL
+}
 
 ASID ::= INTEGER
 
-END
+AddressFamilyIdentifier ::= OCTET STRING (SIZE (2))
 
+END

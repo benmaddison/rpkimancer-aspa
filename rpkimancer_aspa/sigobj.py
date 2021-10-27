@@ -22,31 +22,33 @@ from rpkimancer.sigobj.base import EncapsulatedContentType, SignedObject
 
 log = logging.getLogger(__name__)
 
-ProviderASSetInfo = typing.Optional[typing.Iterable[int]]
+ProviderASSetInfo = typing.Iterable[typing.Tuple[int, typing.Optional[int]]]
+
+
+def provider(as_id: int, afi: typing.Optional[int]) -> typing.Dict[str, bytes]:
+    """Construct ProviderAS dict object."""
+    provider_as = {"providerASID": as_id}
+    if afi is not None:
+        provider_as["afiLimit"] = AFI[afi]
+    return provider_as
 
 
 class AspaContentType(EncapsulatedContentType):
     """encapContentInfo for RPKI ASPA Objects."""
 
     asn1_definition = RPKI_ASPA_2020.ct_ASPA
-    file_ext = "aspa"
+    file_ext = "asa"
     ip_resources = None
 
     def __init__(self, *,
                  version: int = 0,
-                 afi: int,
                  customer_as: int,
-                 provider_as_set: ProviderASSetInfo = None) -> None:
+                 provider_as_set: ProviderASSetInfo) -> None:
         """Initialise the encapContentInfo."""
-        if provider_as_set is None:
-            provider_as_set = list()
-        else:
-            provider_as_set = list(provider_as_set)
+        providers = [provider(as_id, afi) for as_id, afi in provider_as_set]
         data: typing.Dict[str, typing.Any] = {"version": version,
-                                              "aFI": AFI[afi],
-                                              "customerASID": customer_as}
-        if provider_as_set is not None:
-            data["providerASSET"] = list(provider_as_set)
+                                              "customerASID": customer_as,
+                                              "providers": providers}
         super().__init__(data)
         self._as_resources = [customer_as]
 
