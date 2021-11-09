@@ -25,9 +25,10 @@ log = logging.getLogger(__name__)
 ProviderASSetInfo = typing.Iterable[typing.Tuple[int, typing.Optional[int]]]
 
 
-def provider(as_id: int, afi: typing.Optional[int]) -> typing.Dict[str, bytes]:
+def provider(as_id: int,
+             afi: typing.Optional[int]) -> typing.Dict[str, typing.Any]:
     """Construct ProviderAS dict object."""
-    provider_as = {"providerASID": as_id}
+    provider_as: typing.Dict[str, typing.Any] = {"providerASID": as_id}
     if afi is not None:
         provider_as["afiLimit"] = AFI[afi]
     return provider_as

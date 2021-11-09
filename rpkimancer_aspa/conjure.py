@@ -33,6 +33,7 @@ META_PROVIDER_AS = "<asn[:(4|6)]>"
 
 def provider_as(spec: str) -> typing.Tuple[int, typing.Optional[int]]:
     """Argument type checker for `ASID:AFI` pair."""
+    afi: typing.Optional[int]
     try:
         as_id, afi = map(int, spec.split(":", 1))
     except ValueError:
