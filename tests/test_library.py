@@ -39,7 +39,7 @@ class TestCli:
     def test_perceive(self, target_directory, fmt):
         """Test the perceive subcommand."""
         from rpkimancer.cli.__main__ import main
-        pattern = os.path.join(str(target_directory), "**", "*.aspa")
+        pattern = os.path.join(str(target_directory), "**", "*.asa")
         paths = glob.glob(pattern, recursive=True)
         argv = ["perceive",
                 "--signed-data",
