@@ -1,6 +1,8 @@
 RPKI-ASPA-2020
-  { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
-     pkcs-9(9) smime(16) modules(0) id-mod-rpki-aspa-2020(73) } -- next available
+  { iso(1) identified-organization(3) dod(6) internet(1)
+    private(4) enterprise(1) workonline(35743)
+    rpki(3) work-in-progress(1) module(0) aspa(1) draft-07(7) }
+
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
 IMPORTS
@@ -21,7 +23,7 @@ id-smime OBJECT IDENTIFIER ::= { iso(1) member-body(2)
 
 id-ct OBJECT IDENTIFIER ::= { id-smime 1 }
 
-id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct 49 } -- next available
+id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct 49 }
 
 ct-ASPA CONTENT-TYPE ::=
     { TYPE ASProviderAttestation IDENTIFIED BY id-ct-ASPA }

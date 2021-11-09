@@ -1,6 +1,7 @@
 RPKI-ASPA-2020
   { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
-     pkcs-9(9) smime(16) modules(0) id-mod-rpki-aspa-2020(TBD2) }
+     pkcs-9(9) smime(16) modules(0) id-mod-rpki-aspa-2020(TBD) }
+
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
 IMPORTS
@@ -21,7 +22,7 @@ id-smime OBJECT IDENTIFIER ::= { iso(1) member-body(2)
 
 id-ct OBJECT IDENTIFIER ::= { id-smime 1 }
 
-id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct TBD }
+id-ct-ASPA OBJECT IDENTIFIER ::= { id-ct 49 }
 
 ct-ASPA CONTENT-TYPE ::=
     { TYPE ASProviderAttestation IDENTIFIED BY id-ct-ASPA }
