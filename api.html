@@ -50,7 +50,7 @@
 <p>RPKI ASPA implementation - draft-ietf-sidrops-rpki-aspa.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">Aspa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">issuer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">Aspa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">issuer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.sigobj.base.html#rpkimancer.sigobj.base.SignedObject" title="(in rpkimancer v0.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer.sigobj.base.SignedObject</span></code></a></p>
 <p>CMS ASN.1 ContentInfo for RPKI ASPA Objects.</p>
 <dl class="field-list simple">
@@ -88,19 +88,19 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.content_data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">content_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.content_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">content_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.content_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the underlying python data for this type instance.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.econtent">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">econtent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">rpkimancer.sigobj.base.EncapsulatedContent</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">econtent</span></span><em class="property"><span class="pre">:</span> <span class="pre">rpkimancer.sigobj.base.EncapsulatedContent</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the Signed Object’s eContent.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.econtent_info">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">econtent_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.cms.html#rpkimancer.cms.EncapsulatedContentInfo" title="(in rpkimancer v0.1)"><span class="pre">rpkimancer.cms.EncapsulatedContentInfo</span></a></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">econtent_info</span></span><em class="property"><span class="pre">:</span> <span class="pre">rpkimancer.cms.EncapsulatedContentInfo</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the Signed Object’s encapContentInfo.</p>
 </dd></dl>
 
@@ -112,13 +112,13 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.file_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.file_name" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">file_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.file_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct the file name of the SignedObject.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.from_data">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.from_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.from_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an instance from python data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -132,7 +132,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.from_der">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_der</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">der_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.from_der" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_der</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">der_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.from_der" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an instance from DER encoded data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -165,7 +165,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.register_econtent_type">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register_econtent_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">econtent_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.register_econtent_type" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">register_econtent_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">econtent_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.register_econtent_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add CONTENT-TYPE instance to eContentType constraint set.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -250,7 +250,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">AspaEContent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">afi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customer_as</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider_as_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">AspaEContent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">afi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customer_as</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider_as_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer.sigobj.base.EncapsulatedContent</span></code></p>
 <p>encapContentInfo for RPKI ASPA Objects.</p>
 <dl class="field-list simple">
@@ -266,14 +266,9 @@
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a></p>
 </dd>
 </dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.ip_resources">
-<span class="sig-name descname"><span class="pre">ip_resources</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.ip_resources" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.as_resources">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_resources</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><s><span class="pre">'INHERIT'</span></s><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.as_resources" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">as_resources</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[Union[Literal[INHERIT],</span> <span class="pre">Iterable[Union[int,</span> <span class="pre">Tuple[int,</span> <span class="pre">int]]]]]</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.as_resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the AS Number Resources covered by this ASPA.</p>
 </dd></dl>
 
@@ -293,7 +288,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.content_data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">content_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.content_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">content_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.content_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the underlying python data for this type instance.</p>
 </dd></dl>
 
@@ -316,7 +311,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.from_data">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.from_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.from_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an instance from python data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -330,7 +325,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.from_der">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_der</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">der_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.from_der" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_der</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">der_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.from_der" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an instance from DER encoded data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -457,7 +452,7 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -469,7 +464,7 @@
     </div>
   <div class="footer">
     &copy; Copyright 2021, Ben Maddison.
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.
   </div>
   
   </body>
