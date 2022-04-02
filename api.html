@@ -51,7 +51,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">Aspa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">issuer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.sigobj.base.html#rpkimancer.sigobj.base.SignedObject" title="(in rpkimancer v0.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer.sigobj.base.SignedObject</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.sigobj.base.html#rpkimancer.sigobj.base.SignedObject" title="(in rpkimancer v0.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer.sigobj.base.SignedObject</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer_aspa.sigobj.AspaContentType</span></code>]</p>
 <p>CMS ASN.1 ContentInfo for RPKI ASPA Objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -66,12 +66,6 @@
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.econtent_cls">
-<span class="sig-name descname"><span class="pre">econtent_cls</span></span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent_cls" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#rpkimancer_aspa.sigobj.AspaEContent" title="rpkimancer_aspa.sigobj.AspaEContent"><code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer_aspa.sigobj.AspaEContent</span></code></a></p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.constructed">
 <span class="sig-name descname"><span class="pre">constructed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.constructed" title="Permalink to this definition">¶</a></dt>
@@ -94,14 +88,20 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.econtent">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">econtent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">rpkimancer.sigobj.base.EncapsulatedContent</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">econtent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">rpkimancer.sigobj.base.ECT</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the Signed Object’s eContent.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.econtent_info">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">econtent_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.cms.html#rpkimancer.cms.EncapsulatedContentInfo" title="(in rpkimancer v0.1)"><span class="pre">rpkimancer.cms.EncapsulatedContentInfo</span></a></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">econtent_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.cms.html#rpkimancer.cms.EncapsulatedContentInfo" title="(in rpkimancer v0.1)"><span class="pre">rpkimancer.cms.EncapsulatedContentInfo</span></a><span class="p"><span class="pre">[</span></span><span class="pre">rpkimancer.sigobj.base.ECT</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the Signed Object’s encapContentInfo.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.econtent_type">
+<span class="sig-name descname"><span class="pre">econtent_type</span></span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.econtent_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer_aspa.sigobj.AspaContentType</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -125,7 +125,7 @@
 <dd class="field-odd"><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><em>Any</em></a>) – </p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>rpkimancer.asn1.ContentSubclass</p>
+<dd class="field-even"><p>rpkimancer.asn1.InterfaceSubclass</p>
 </dd>
 </dl>
 </dd></dl>
@@ -139,7 +139,7 @@
 <dd class="field-odd"><p><strong>der_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.10)"><em>bytes</em></a>) – </p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>rpkimancer.asn1.ContentSubclass</p>
+<dd class="field-even"><p>rpkimancer.asn1.InterfaceSubclass</p>
 </dd>
 </dl>
 </dd></dl>
@@ -170,8 +170,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>content_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.10)"><em>Type</em></a><em>[</em><em>rpkimancer.cms.ContentDataSubclass</em><em>]</em>) – </p></li>
-<li><p><strong>econtent_type</strong> (<em>pycrate_asn1rt.asnobj_class.CLASS</em>) – </p></li>
+<li><p><strong>content_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.10)"><em>Type</em></a><em>[</em><em>rpkimancer.cms.CT</em><em>]</em>) – </p></li>
+<li><p><strong>econtent_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.10)"><em>Type</em></a><em>[</em><em>rpkimancer.cms.ECT</em><em>]</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -238,190 +238,6 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa.to_txt">
 <span class="sig-name descname"><span class="pre">to_txt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa.to_txt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get default text serialization.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">AspaEContent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">afi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customer_as</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider_as_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rpkimancer.sigobj.base.EncapsulatedContent</span></code></p>
-<p>encapContentInfo for RPKI ASPA Objects.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – </p></li>
-<li><p><strong>afi</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – </p></li>
-<li><p><strong>customer_as</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – </p></li>
-<li><p><strong>provider_as_set</strong> (<em>ProviderASSetInfo</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.ip_resources">
-<span class="sig-name descname"><span class="pre">ip_resources</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.ip_resources" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.as_resources">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_resources</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'INHERIT'</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.as_resources" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the AS Number Resources covered by this ASPA.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.constructed">
-<span class="sig-name descname"><span class="pre">constructed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.constructed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provide a context manager to mediate the global pycrates object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><em>Any</em></a><em>]</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>pycrate_asn1rt.asnobj.ASN1Obj</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.content_data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">content_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.content_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the underlying python data for this type instance.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.digest">
-<span class="sig-name descname"><span class="pre">digest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.digest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the message digest over the DER-encoded eContent.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.10)">bytes</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.digest_algorithm">
-<span class="sig-name descname"><span class="pre">digest_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usedforsecurity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.digest_algorithm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a sha256 hash object; optionally initialized with a string</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.from_data">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.from_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct an instance from python data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><em>Any</em></a>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>rpkimancer.asn1.ContentSubclass</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.from_der">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_der</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">der_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.from_der" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct an instance from DER encoded data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>der_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.10)"><em>bytes</em></a>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>rpkimancer.asn1.ContentSubclass</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.signed_attrs">
-<span class="sig-name descname"><span class="pre">signed_attrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.signed_attrs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct the signedAttrs value from the encapContentInfo.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.cms.html#rpkimancer.cms.SignedAttributes" title="(in rpkimancer v0.1)">rpkimancer.cms.SignedAttributes</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.signed_attrs_digest">
-<span class="sig-name descname"><span class="pre">signed_attrs_digest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.signed_attrs_digest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the message digest over the DER-encoded signedAttrs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.to_asn1">
-<span class="sig-name descname"><span class="pre">to_asn1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.to_asn1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialize as ASN.1 data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.to_der">
-<span class="sig-name descname"><span class="pre">to_der</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.to_der" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialize as DER.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.10)">bytes</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.to_internal">
-<span class="sig-name descname"><span class="pre">to_internal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.to_internal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialize using internal python repr.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.to_jer">
-<span class="sig-name descname"><span class="pre">to_jer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.to_jer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialize as JER.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.to_json">
-<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.to_json" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialize as JSON.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.AspaEContent.to_txt">
-<span class="sig-name descname"><span class="pre">to_txt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.AspaEContent.to_txt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get default text serialization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
