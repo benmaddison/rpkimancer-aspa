@@ -18,18 +18,17 @@ import typing
 
 from rpkimancer.asn1.mod import RPKI_ASPA_2020
 from rpkimancer.resources import AFI, AsResourcesInfo
-from rpkimancer.sigobj.base import EncapsulatedContent, SignedObject
+from rpkimancer.sigobj.base import EncapsulatedContentType, SignedObject
 
 log = logging.getLogger(__name__)
 
 ProviderASSetInfo = typing.Optional[typing.Iterable[int]]
 
 
-class AspaEContent(EncapsulatedContent):
+class AspaContentType(EncapsulatedContentType):
     """encapContentInfo for RPKI ASPA Objects."""
 
-    content_type = RPKI_ASPA_2020.id_ct_ASPA
-    content_syntax = RPKI_ASPA_2020.ASProviderAttestation
+    asn1_definition = RPKI_ASPA_2020.ct_ASPA
     file_ext = "aspa"
     ip_resources = None
 
@@ -57,7 +56,5 @@ class AspaEContent(EncapsulatedContent):
         return self._as_resources
 
 
-class Aspa(SignedObject, econtent_type=RPKI_ASPA_2020.ct_ASPA):
+class Aspa(SignedObject[AspaContentType]):
     """CMS ASN.1 ContentInfo for RPKI ASPA Objects."""
-
-    econtent_cls = AspaEContent
