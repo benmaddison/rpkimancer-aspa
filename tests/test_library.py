@@ -31,7 +31,9 @@ class TestCli:
     def test_conjure(self, target_directory):
         """Test the conjure subcommand."""
         from rpkimancer.cli.__main__ import main
-        argv = ["conjure", "--output-dir", f"{target_directory}"]
+        argv = ["conjure",
+                "--output-dir", f"{target_directory}",
+                "--aspa-provider-asns", "65001", "65002:4", "65003:6"]
         retval = main(argv)
         assert retval is None
 
