@@ -16,7 +16,7 @@ from __future__ import annotations
 import logging
 import typing
 
-from rpkimancer.asn1.mod import RPKI_ASPA_2020
+from rpkimancer.asn1.mod import RPKI_ASPA_2022
 from rpkimancer.resources import AFI, AsResourcesInfo
 from rpkimancer.sigobj.base import EncapsulatedContentType, SignedObject
 
@@ -37,7 +37,7 @@ def provider(as_id: int,
 class AspaContentType(EncapsulatedContentType):
     """encapContentInfo for RPKI ASPA Objects."""
 
-    asn1_definition = RPKI_ASPA_2020.ct_ASPA
+    asn1_definition = RPKI_ASPA_2022.ct_ASPA
     file_ext = "asa"
     ip_resources = None
 

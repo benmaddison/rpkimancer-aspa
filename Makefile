@@ -1,7 +1,7 @@
 #
 # $Id: Makefile,v 1.1.1.1 2002-11-11 05:11:48 randy Exp $
 #
-MOD=RPKI-ASPA-2020
+MOD=RPKI-ASPA-2022
 
 .PHONY: all
 all: asn1
