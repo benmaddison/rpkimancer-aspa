@@ -14,7 +14,6 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Welcome to rpkimancer-aspa’s documentation" href="index.html" />
@@ -47,10 +46,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="object-prototyping-api-reference">
-<h1>Object Prototyping API Reference<a class="headerlink" href="#object-prototyping-api-reference" title="Permalink to this heading">¶</a></h1>
+  <section id="module-rpkimancer_aspa.sigobj">
+<span id="object-prototyping-api-reference"></span><h1>Object Prototyping API Reference<a class="headerlink" href="#module-rpkimancer_aspa.sigobj" title="Permalink to this heading">¶</a></h1>
 <p>RPKI ASPA implementation - draft-ietf-sidrops-rpki-aspa.</p>
-<span class="target" id="module-rpkimancer_aspa.sigobj"></span><dl class="py class">
+<dl class="py class">
 <dt class="sig sig-object py" id="rpkimancer_aspa.sigobj.Aspa">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpkimancer_aspa.sigobj.</span></span><span class="sig-name descname"><span class="pre">Aspa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">issuer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpkimancer_aspa.sigobj.Aspa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://benmaddison.github.io/rpkimancer/main/generated/rpkimancer.sigobj.base.html#rpkimancer.sigobj.base.SignedObject" title="(in rpkimancer v0.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignedObject</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">AspaContentType</span></code>]</p>
@@ -249,35 +248,7 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Object Prototyping API Reference</a><ul>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa"><code class="docutils literal notranslate"><span class="pre">Aspa</span></code></a><ul>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.constructed"><code class="docutils literal notranslate"><span class="pre">Aspa.constructed()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.content_data"><code class="docutils literal notranslate"><span class="pre">Aspa.content_data</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.econtent"><code class="docutils literal notranslate"><span class="pre">Aspa.econtent</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.econtent_info"><code class="docutils literal notranslate"><span class="pre">Aspa.econtent_info</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.econtent_type"><code class="docutils literal notranslate"><span class="pre">Aspa.econtent_type</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.file_name"><code class="docutils literal notranslate"><span class="pre">Aspa.file_name</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.from_data"><code class="docutils literal notranslate"><span class="pre">Aspa.from_data()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.from_der"><code class="docutils literal notranslate"><span class="pre">Aspa.from_der()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.publish"><code class="docutils literal notranslate"><span class="pre">Aspa.publish()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.register_econtent_type"><code class="docutils literal notranslate"><span class="pre">Aspa.register_econtent_type()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.to_asn1"><code class="docutils literal notranslate"><span class="pre">Aspa.to_asn1()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.to_der"><code class="docutils literal notranslate"><span class="pre">Aspa.to_der()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.to_internal"><code class="docutils literal notranslate"><span class="pre">Aspa.to_internal()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.to_jer"><code class="docutils literal notranslate"><span class="pre">Aspa.to_jer()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.to_json"><code class="docutils literal notranslate"><span class="pre">Aspa.to_json()</span></code></a></li>
-<li><a class="reference internal" href="#rpkimancer_aspa.sigobj.Aspa.to_txt"><code class="docutils literal notranslate"><span class="pre">Aspa.to_txt()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div><h3>Related Topics</h3>
+        <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation index</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">Welcome to rpkimancer-aspa’s documentation</a></li>
@@ -306,7 +277,7 @@
     </div>
   <div class="footer">
     &copy; Copyright 2021-2022, Ben Maddison.
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.0.post0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.
   </div>
   
   </body>
